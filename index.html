@@ -24,6 +24,26 @@
   <project-2></project-2>
 
   <script type="module" src="./src/project-2.js"></script>
+
+  <script>
+    // shortcut I use some times
+    function dqs(sel) {
+      return document.querySelector(sel);
+    }
+    console.log(dqs('#getme'));
+    
+    // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
+    dqs('#getme').addEventListener('input', (e) => {
+      console.log(e.target);
+      dqs('.input').innerText = e.target.value;
+    });
+    
+    // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
+    dqs('input').addEventListener('change', (e) => {
+      console.log(e.target);
+      dqs('.change').innerText = e.target.value;
+    });
+  </script>
 </body>
 
 </html>

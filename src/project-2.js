@@ -21,6 +21,60 @@ class Project2 extends LitElement {
       text-align: center;
     }
 
+
+    .boxwidth {
+      width: 800px;
+    }
+    .topbar {
+      height:100px;
+      text-align: left;
+      font-size: 24px;
+      border: 3px solid black;
+      background-color: white;
+    }
+    .searchbar {
+      height: 80px;
+      text-align: left;
+      font-size: 18px;
+      border: 3px solid black;
+      background-color: white
+    }
+
+    .sortbar {
+      height: 40px;
+      text-align: left;
+      font-size: 18px;
+      border: 3px solid black;
+      background-color: white;
+    }
+
+    // -------css for searchbar-------
+    input {
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-bottom: 1px solid black;
+      transition: all .3s ease-in-out;
+      width: 500px;
+    }
+    input:focus {
+      border-bottom: 2px solid blue;
+      outline: 1px solid blue;
+      outline-offset: 4px;
+    }
+    input:hover:not(:focus) {
+      border-bottom: 2px solid blue; 
+    }
+
+    /** accessibility enhancement to not animate the changes possibly
+    for users that have motion activated disabilities **/
+    @media (prefers-reduced-motion) {
+      input {
+        transition: none;
+      }
+}
+
+
     
   `;
 
@@ -35,14 +89,15 @@ class Project2 extends LitElement {
 
   render() {
     return html`
-      <div>
-        <div> 
+      <div class="boxwidth">
+        <div class="topbar"> 
           Explore
         </div>
-        <div>
+        <div class="searchbar">
           Search:
+          <input type="text" id="getme" placeholder="Search Content, Topics, and People" />
         </div>
-        <div>
+        <div class="sortbar">
           Sort By:
         </div>
         <div>
