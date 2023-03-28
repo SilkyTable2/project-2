@@ -9,6 +9,7 @@ class Project2 extends LitElement {
     titles: { type: String },
     color: { type: String }
   }
+  // hihihihihih
 
   static styles = css`
     :host {
