@@ -48,6 +48,22 @@ class Project2 extends LitElement {
       background-color: white;
     }
 
+    .topicselectbar {
+      height: 40px;
+      text-align: left;
+      font-size: 18px;
+      border: 3px solid black;
+      background-color: white;
+    }
+
+    .badgebar {
+      height: 400px;
+      text-align: left;
+      font-size: 18px;
+      border: 3px solid black;
+      background-color: white;
+    }
+
     // -------css for searchbar-------
     input {
       font-size: 18px;
@@ -100,10 +116,10 @@ class Project2 extends LitElement {
         <div class="sortbar">
           Sort By:
         </div>
-        <div>
+        <div class="topicselectbar">
           Topic Selector:
         </div>
-        <div>
+        <div class="badgebar">
           Badges:
         </div>
       </div>
