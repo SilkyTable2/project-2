@@ -114,12 +114,6 @@ class Project2 extends LitElement {
           Search:
           <input type="text" id="getme" placeholder="Search Content, Topics, and People" />
         </div>
-        <div class="sortbar">
-          Sort By:
-        </div>
-        <div class="topicselectbar">
-          Topic Selector:
-        </div>
         <div class="badgebar">
           Badges:
         </div>
