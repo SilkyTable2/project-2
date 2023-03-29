@@ -1,6 +1,5 @@
 import { LitElement, html, css } from 'lit';
 
-
 class CardTemp extends LitElement {
   static properties = {
     header: { type: String },
