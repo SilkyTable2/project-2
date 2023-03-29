@@ -3,11 +3,6 @@ import { LitElement, html, css } from 'lit';
 
 class Project2 extends LitElement {
   static properties = {
-    header: { type: String },
-    image: { type: String },
-    creator: { type: String },
-    titles: { type: String },
-    color: { type: String }
   }
   // hihihihihih
 
@@ -17,9 +12,7 @@ class Project2 extends LitElement {
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      max-width: 960px;
       margin: 0 auto;
-      text-align: center;
     }
 
 
@@ -39,22 +32,6 @@ class Project2 extends LitElement {
       font-size: 18px;
       border: 3px solid black;
       background-color: white
-    }
-
-    .sortbar {
-      height: 40px;
-      text-align: left;
-      font-size: 18px;
-      border: 3px solid black;
-      background-color: white;
-    }
-
-    .topicselectbar {
-      height: 40px;
-      text-align: left;
-      font-size: 18px;
-      border: 3px solid black;
-      background-color: white;
     }
 
     .badgebar {
@@ -95,14 +72,6 @@ class Project2 extends LitElement {
     
   `;
 
-  constructor() {
-    super();
-    this.header = 'My app';
-    this.image = "";
-    this.creator = "";
-    this.titles = "";
-    this.color = "";
-  }
 
   render() {
     return html`
