@@ -5,7 +5,7 @@ import "./project-2.js";
 
 class Badgelist extends LitElement {
   static properties = {
-    badges: { type: String }
+    badges: { type: Array }
   }
 
   static styles = css`
@@ -19,7 +19,13 @@ class Badgelist extends LitElement {
       text-align: center;
     }
 
-    
+    .wrapper {
+      border: 2px solid black;
+      display: flex;
+    }
+    .item {
+      display: inline-flex;
+    }
     `;
 
     constructor() {
@@ -43,7 +49,13 @@ class Badgelist extends LitElement {
 
     render() {
       return html`
-
+        <div class='wrapper'>
+            ${this.badges.map(badges => html`
+            <div class="item">
+                <card-temp> heading="${badges.heading}" titles="${badges.titles}" image="${badges.image}" color="${badges.color}"></card-temp>
+            </div>
+            `)}
+        </div>
       `;
     }
 }

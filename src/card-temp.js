@@ -26,7 +26,6 @@ class CardTemp extends LitElement {
     }
 
     .headers {
-        background-color: ${this.color};
         align-items: left;
         height: 50px;
         width: 200px;
@@ -55,9 +54,9 @@ class CardTemp extends LitElement {
 
   constructor() {
     super();
-    this.header = 'My app';
+    this.header = 'New Topic';
     this.image = "";
-    this.creator = "john doe";
+    this.creator = "John Doe";
     this.titles = "Test123";
     this.color = "#800008";
   }
