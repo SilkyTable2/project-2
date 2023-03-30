@@ -4,7 +4,6 @@ import { LitElement, html, css } from 'lit';
 class Project2 extends LitElement {
   static properties = {
   }
-  // hihihihihih
 
   static styles = css`
     :host {
