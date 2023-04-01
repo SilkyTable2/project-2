@@ -19,6 +19,11 @@
   <title>project-2</title>
 </head>
 
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+
 <body>
   <card-temp></card-temp>
   <badge-list></badge-list>
@@ -30,25 +35,6 @@
     import "./src/badge-list.js";
   </script>
 
-  <script>
-    // shortcut I use some times
-    function dqs(sel) {
-      return document.querySelector(sel);
-    }
-    console.log(dqs('#getme'));
-    
-    // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
-    dqs('#getme').addEventListener('input', (e) => {
-      console.log(e.target);
-      dqs('.input').innerText = e.target.value;
-    });
-    
-    // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
-    dqs('input').addEventListener('change', (e) => {
-      console.log(e.target);
-      dqs('.change').innerText = e.target.value;
-    });
-  </script>
 </body>
 
 </html>

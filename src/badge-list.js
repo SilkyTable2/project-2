@@ -1,12 +1,12 @@
 import { LitElement, html, css } from 'lit';
-import "./project-2.js";
+import './project-2.js';
 // import "@lrnwebcomponents/simple-icon/simple-icon.js";
 // import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
 
 class Badgelist extends LitElement {
   static properties = {
-    badges: { type: Array }
-  }
+    badges: { type: Array },
+  };
 
   static styles = css`
     :host {
@@ -26,38 +26,39 @@ class Badgelist extends LitElement {
     .item {
       display: inline-flex;
     }
-    `;
+  `;
 
-    constructor() {
-        super();
-        this.badges = [];
-        this.updateArray();
+  constructor() {
+    super();
+    this.badges = [];
+    this.updateArray();
+  }
+
+  async updateArray() {
+    const address = '/api/badges'; // Change the address to a relative path
+    const result = await fetch(address);
+    if (result.ok) {
+      const data = await result.json();
+      this.badges = data;
     }
+  }
 
-    updateArray() {
-        const address = '/api/badges';// it works from the ../assets/contentlist.json, i swear...
-        fetch(address).then((response) => { // code bricks during vercel upload if i dont define const data
-            if (response.ok) {
-                return response.json()
-            }
-            return [];
-        })
-        .then((response) => {
-            this.badges = response;
-        });
-    }
-
-    render() {
-      return html`
-        <div class='wrapper'>
-            ${this.badges.map(badges => html`
+  render() {
+    return html`
+      <div class="wrapper">
+        ${this.badges.map(
+          badges => html`
             <div class="item">
-                <card-temp> heading="${badges.heading}" titles="${badges.titles}" image="${badges.image}" color="${badges.color}"></card-temp>
+              <card-temp>
+                heading="${badges.heading}" titles="${badges.titles}"
+                image="${badges.image}" color="${badges.color}"></card-temp
+              >
             </div>
-            `)}
-        </div>
-      `;
-    }
+          `
+        )}
+      </div>
+    `;
+  }
 }
 
 customElements.define('badge-list', Badgelist);

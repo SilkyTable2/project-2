@@ -65,6 +65,12 @@ class Project2 extends LitElement {
     }
   `;
 
+  constructor() {
+    super();
+    console.log('hello1');
+    this.searchText = '';
+  }
+
   render() {
     return html`
       <div class="boxwidth">
