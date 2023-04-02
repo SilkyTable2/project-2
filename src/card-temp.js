@@ -57,7 +57,7 @@ class CardTemp extends LitElement {
 
   constructor() {
     super();
-    this.header = 'New Topic';
+    this.header = '';
     this.image = "";
     this.creator = "John Doe";
     this.titles = "Test123";
