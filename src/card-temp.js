@@ -13,7 +13,7 @@ class CardTemp extends LitElement {
     :host {
       display: flex;
       flex-direction: column;
-      align-items: center;
+     // align-items: center;
       justify-content: flex-start;
       margin: 0 auto;
     }
@@ -23,6 +23,7 @@ class CardTemp extends LitElement {
         height: 100px;
         border: 2px Solid black;
         background-color: solid white;
+
     }
 
     .headers {
