@@ -13,7 +13,7 @@ class CardTemp extends LitElement {
     :host {
       display: flex;
       flex-direction: column;
-     // align-items: center;
+      align-items: center;
       justify-content: flex-start;
       margin: 0 auto;
     }

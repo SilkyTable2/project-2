@@ -52,7 +52,7 @@ class Badgelist extends LitElement {
             <div class="item">
               <card-temp>
                 heading="${badges.heading}" titles="${badges.titles}"
-                image="${badges.image}" color="${badges.color}"
+                image="${badges.image}" color="${badges.color}" creator="${badges.creator}"
               </card-temp>
             </div>
           `
