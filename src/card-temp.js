@@ -27,21 +27,24 @@ class CardTemp extends LitElement {
 
     .headers {
         align-items: left;
-        height: 50px;
+        height: 20px;
         width: 200px;
+        font-size: 12px;
     }
 
     .titles {
-        height: 100px;
+        height: 20px;
         width: 200px;
         background-color: solid white;
         align-items: left;
+        font-size: 12px;
     }
 
     .creators {
-      height: 50px;
+      height: 20px;
       background-color:solid white;
       width: 200px;
+      font-size: 12px;
     }
 
     .images {

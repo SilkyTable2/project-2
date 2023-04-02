@@ -31,11 +31,9 @@ class Project2 extends LitElement {
     }
 
     .badgebar {
-      height: 400px;
+      height: 30px;
       text-align: left;
       font-size: 18px;
-      border: 3px solid black;
-      background-color: white;
     }
 
     // -------css for searchbar-------

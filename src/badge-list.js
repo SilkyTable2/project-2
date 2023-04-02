@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import './project-2.js';
+import "./card-temp.js";
 // import "@lrnwebcomponents/simple-icon/simple-icon.js";
 // import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
 
@@ -51,8 +52,8 @@ class Badgelist extends LitElement {
             <div class="item">
               <card-temp>
                 heading="${badges.heading}" titles="${badges.titles}"
-                image="${badges.image}" color="${badges.color}"></card-temp
-              >
+                image="${badges.image}" color="${badges.color}"
+              </card-temp>
             </div>
           `
         )}
