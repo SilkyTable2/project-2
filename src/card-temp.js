@@ -21,7 +21,7 @@ class CardTemp extends LitElement {
     .cards {
         width: 200px;
         height: 100px;
-        border: 3px Solid black;
+        border: 2px Solid black;
         background-color: solid white;
     }
 
@@ -57,7 +57,7 @@ class CardTemp extends LitElement {
 
   constructor() {
     super();
-    this.header = '';
+    this.header = 'New Topic';
     this.image = "";
     this.creator = "John Doe";
     this.titles = "Test123";
