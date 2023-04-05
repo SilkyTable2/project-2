@@ -1,4 +1,6 @@
 import { LitElement, html, css } from 'lit';
+import GlobalBadgeCtor from './global-badge.js';
+import './badge-list.js';
 
 class Project2 extends LitElement {
   static properties = {};
@@ -65,23 +67,32 @@ class Project2 extends LitElement {
 
   constructor() {
     super();
-    console.log('hello1');
-    this.searchText = '';
+    this.globalBadgeCtor = new GlobalBadgeCtor(this);
+  }
+
+  _onSearchTextChange(e) {
+    this.globalBadgeCtor.searchText = e.target.value;
   }
 
   render() {
+    console.log('rendering project-2');
     return html`
-      <div class="boxwidth">
-        <div class="topbar">Explore</div>
-        <div class="searchbar">
-          Search:
-          <input
-            type="text"
-            id="getme"
-            placeholder="Search Content, Topics, and People"
-          />
+      <div>
+        <div class="boxwidth">
+          <div>${this.globalBadgeCtor.searchText}</div>
+          <div class="topbar">Explore</div>
+          <div class="searchbar">
+            Search:
+            <input
+              @input=${this._onSearchTextChange}
+              type="text"
+              id="getme"
+              placeholder="Search Content, Topics, and People"
+            />
+          </div>
+          <div class="badgebar">Badges:</div>
         </div>
-        <div class="badgebar">Badges:</div>
+        <badge-list .badges=${this.globalBadgeCtor.badges}></badge-list>
       </div>
     `;
   }

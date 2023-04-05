@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
-import './project-2.js';
 import './card-temp.js';
+import './project-2.js';
 // import "@lrnwebcomponents/simple-icon/simple-icon.js";
 // import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
 
@@ -29,31 +29,28 @@ class Badgelist extends LitElement {
     }
   `;
 
-  constructor() {
-    super();
-    this.badges = [];
-    this.updateArray();
-  }
-
-  async updateArray() {
-    const address = '/api/badges'; // Change the address to a relative path
-    const result = await fetch(address);
-    if (result.ok) {
-      const data = await result.json();
-      this.badges = data;
-    }
-  }
+  // async updateArray() {
+  //   const address = '/api/badges'; // Change the address to a relative path
+  //   const result = await fetch(address);
+  //   if (result.ok) {
+  //     const data = await result.json();
+  //     this.badges = data;
+  //   }
+  // }
 
   render() {
     return html`
       <div class="wrapper">
         ${this.badges.map(
-          badges => html`
+          badge => html`
             <div class="item">
-              <card-temp>
-                heading="${badges.heading}" titles="${badges.titles}"
-                image="${badges.image}" color="${badges.color}"
-                creator="${badges.creator}"
+              <card-temp
+                heading="${badge.heading}"
+                titles="${badge.titles}"
+                image="${badge.image}"
+                color="${badge.color}"
+                creator="${badge.creator}"
+              >
               </card-temp>
             </div>
           `
