@@ -1,6 +1,8 @@
 import { LitElement, html, css } from 'lit';
 import GlobalBadgeCtor from './global-badge.js';
 import './badge-list.js';
+import '@lrnwebcomponents/simple-icon/simple-icon.js';
+import '@lrnwebcomponents/simple-icon/lib/simple-icons.js';
 
 class Project2 extends LitElement {
   static properties = {};
@@ -82,6 +84,7 @@ class Project2 extends LitElement {
           <div>${this.globalBadgeCtor.searchText}</div>
           <div class="topbar">Explore</div>
           <div class="searchbar">
+            <simple-icon icon="icons:search"></simple-icon>
             Search:
             <input
               @input=${this._onSearchTextChange}
