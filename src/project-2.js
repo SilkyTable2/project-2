@@ -95,7 +95,11 @@ class Project2 extends LitElement {
           </div>
           <div class="badgebar">Badges:</div>
         </div>
-        <badge-list .badges=${this.globalBadgeCtor.badges}></badge-list>
+        ${this.globalBadgeCtor.isLoading
+          ? html`<div>Loading...</div>`
+          : html`<badge-list
+              .badges=${this.globalBadgeCtor.badges}
+            ></badge-list>`}
       </div>
     `;
   }
