@@ -26,7 +26,7 @@ class GlobalBadgeCtor {
 
   set searchText(value) {
     this._searchText = value;
-    this.getSearchResults(value).then(res => {
+    getSearchResults(value).then(res => {
       this.badges = res;
       this.host.requestUpdate();
     });
