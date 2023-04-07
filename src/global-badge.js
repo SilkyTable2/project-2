@@ -1,3 +1,15 @@
+async function getSearchResults(value = '') {
+  const results = await fetch(`/api/badges?search=${value}`)
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+      return [];
+    })
+    .then(data => data);
+  return results;
+}
+
 class GlobalBadgeCtor {
   host;
 
@@ -7,26 +19,17 @@ class GlobalBadgeCtor {
 
     this._searchText = '';
     this.host.addController(this);
-    this.badges = [];
-    this.getSearchResults();
-  }
-
-  async getSearchResults(value = '') {
-    const results = await fetch(`/api/badges?search=${value}`)
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        }
-        return [];
-      })
-      .then(data => data);
-    this.badges = results || [];
+    getSearchResults().then(res => {
+      this.badges = res;
+    });
   }
 
   set searchText(value) {
     this._searchText = value;
-    this.getSearchResults(value);
-    this.host.requestUpdate();
+    this.getSearchResults(value).then(res => {
+      this.badges = res;
+      this.host.requestUpdate();
+    });
   }
 
   get searchText() {
