@@ -26,6 +26,7 @@ class GlobalBadgeCtor {
     getSearchResults().then(res => {
       this.badges = res;
       this.isLoading = false;
+      this.host.requestUpdate();
     });
     this.host.addController(this);
   }
