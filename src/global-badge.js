@@ -7,6 +7,7 @@ class GlobalBadgeCtor {
 
     this._searchText = '';
     this.host.addController(this);
+    this.badges = [];
     this.getSearchResults();
   }
 
@@ -19,7 +20,7 @@ class GlobalBadgeCtor {
         return [];
       })
       .then(data => data);
-    this.badges = results;
+    this.badges = results || [];
   }
 
   set searchText(value) {
