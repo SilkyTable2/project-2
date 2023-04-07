@@ -6,7 +6,11 @@ async function getSearchResults(value = '') {
       }
       return [];
     })
-    .then(data => data);
+    .then(data => data)
+    .catch(error => {
+      console.error('API Error:', error);
+      return [];
+    });
   return results;
 }
 
