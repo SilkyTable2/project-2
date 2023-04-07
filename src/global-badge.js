@@ -22,16 +22,20 @@ class GlobalBadgeCtor {
     // heading, title, creator search text
 
     this._searchText = '';
-    this.host.addController(this);
+    this.isLoading = true;
     getSearchResults().then(res => {
       this.badges = res;
+      this.isLoading = false;
     });
+    this.host.addController(this);
   }
 
   set searchText(value) {
     this._searchText = value;
+    this.isLoading = true;
     getSearchResults(value).then(res => {
       this.badges = res;
+      this.isLoading = false;
       this.host.requestUpdate();
     });
   }
