@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit';
 
 class CardTemp extends LitElement {
   static properties = {
-    header: { type: String },
+    heading: { type: String },
     image: { type: String },
     creator: { type: String },
     titles: { type: String },
@@ -20,7 +20,7 @@ class CardTemp extends LitElement {
 
     .cards {
       width: 200px;
-      height: 100px;
+      height: 130px;
       border: 2px Solid black;
       background-color: solid white;
     }
@@ -30,6 +30,7 @@ class CardTemp extends LitElement {
       height: 20px;
       width: 200px;
       font-size: 12px;
+      background-color: #3399FF; // replace this with content from this.color
     }
 
     .titles {
@@ -37,7 +38,7 @@ class CardTemp extends LitElement {
       width: 200px;
       background-color: solid white;
       align-items: left;
-      font-size: 12px;
+      font-size: 16px;
     }
 
     .creators {
@@ -48,19 +49,26 @@ class CardTemp extends LitElement {
     }
 
     .images {
-      align-items: right;
+      float: right;
       height: 50px;
       width: 50px;
+    }
+    .handle {
+      length: 200px;
+      width: 10px;
+      border: 1px solid black;
+      background-color: solid red;
+      float: left;
     }
   `;
 
   render() {
     return html`
       <div class="cards">
-        <div class="headers">${this.header}</div>
+        <div class="headers">${this.heading}</div>
         <div class="titles">${this.titles}</div>
-        <div class="creators">${this.creator}</div>
-        <img class="images" src="${this.image}" alt="${this.titles}"></img>
+        <div class="creators">Creator: ${this.creator}</div>
+        <img class="images" src="${this.image}" alt="${this.titles}">
       </div>
     `;
   }
