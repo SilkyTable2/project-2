@@ -1,8 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import './card-temp.js';
 import './project-2.js';
-// import "@lrnwebcomponents/simple-icon/simple-icon.js";
-// import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
+
 
 class Badgelist extends LitElement {
   static properties = {
@@ -17,7 +16,7 @@ class Badgelist extends LitElement {
       justify-content: flex-start;
       max-width: 960px;
       margin: 0 auto;
-      text-align: center;
+      text-align: left;
     }
 
     .wrapper {
@@ -28,15 +27,6 @@ class Badgelist extends LitElement {
       display: inline-flex;
     }
   `;
-
-  // async updateArray() {
-  //   const address = '/api/badges'; // Change the address to a relative path
-  //   const result = await fetch(address);
-  //   if (result.ok) {
-  //     const data = await result.json();
-  //     this.badges = data;
-  //   }
-  // }
 
   render() {
     return html`

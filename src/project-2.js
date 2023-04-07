@@ -81,11 +81,9 @@ class Project2 extends LitElement {
     return html`
       <div>
         <div class="boxwidth">
-          <div>${this.globalBadgeCtor.searchText}</div>
           <div class="topbar">Explore</div>
           <div class="searchbar">
-            <simple-icon icon="icons:search"></simple-icon>
-            Search:
+            <simple-icon icon="search"></simple-icon>
             <input
               @input=${this._onSearchTextChange}
               type="text"
