@@ -30,11 +30,11 @@ class CardTemp extends LitElement {
       height: 20px;
       width: 200px;
       font-size: 12px;
-      background-color: #3399FF; // replace this with content from this.color
+      background-color: #3399FF;
     }
 
     .titles {
-      height: 20px;
+      height: 40px;
       width: 200px;
       background-color: solid white;
       align-items: left;
@@ -46,6 +46,7 @@ class CardTemp extends LitElement {
       background-color: solid white;
       width: 200px;
       font-size: 12px;
+      align-items: left;
     }
 
     .images {
@@ -72,6 +73,8 @@ class CardTemp extends LitElement {
       </div>
     `;
   }
+
+
 }
 
 customElements.define('card-temp', CardTemp);
