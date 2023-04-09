@@ -7,6 +7,10 @@ class CardTemp extends LitElement {
     creator: { type: String },
     titles: { type: String },
     color: { type: String },
+    blue: { type: Boolean },
+    yellow: { type: Boolean },
+    purple: { type: Boolean },
+    green: { type: Boolean}
   };
 
   static styles = css`
@@ -16,6 +20,22 @@ class CardTemp extends LitElement {
       align-items: center;
       justify-content: flex-start;
       margin: 0 auto;
+    }
+
+    :host([blue]) #head {
+      background-color: #3399FF;
+    }
+
+    :host([yellow]) #head {
+      background-color: #f2dc23;
+    }
+
+    :host([purple]) #head {
+      background-color: #800080;
+    }
+
+    :host([green]) #head {
+      background-color: #008000;
     }
 
     .cards {
@@ -30,7 +50,6 @@ class CardTemp extends LitElement {
       height: 20px;
       width: 200px;
       font-size: 12px;
-      background-color: #3399FF;
     }
 
     .titles {
@@ -63,10 +82,23 @@ class CardTemp extends LitElement {
     }
   `;
 
+  constructor() {
+    super();
+    this.blue = false;
+    this.yellow = false;
+    this.purple = false;
+    this.green = false;
+    this.heading = "";
+    this.titles = "";
+    this.creator = "";
+    this.images = "";
+    this.color = "";
+  }
+
   render() {
     return html`
       <div class="cards">
-        <div class="headers">${this.heading}</div>
+        <div class="headers" id="head">${this.heading}</div>
         <div class="titles">${this.titles}</div>
         <div class="creators">Creator: ${this.creator}</div>
         <img class="images" src="${this.image}" alt="${this.titles}">
