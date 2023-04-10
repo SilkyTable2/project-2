@@ -7,10 +7,10 @@ class CardTemp extends LitElement {
     creator: { type: String },
     titles: { type: String },
     color: { type: String },
-    blue: { type: Boolean },
-    yellow: { type: Boolean },
-    purple: { type: Boolean },
-    green: { type: Boolean}
+    // blue: { type: Boolean }, see comment below about commented items
+    // yellow: { type: Boolean },
+    // purple: { type: Boolean },
+    // green: { type: Boolean}
   };
 
   static styles = css`
@@ -21,22 +21,23 @@ class CardTemp extends LitElement {
       justify-content: flex-start;
       margin: 0 auto;
     }
+    
+    //Commented out to show approach to custom coloring that we tried to implement
+    //:host([blue]) #head {
+    // background-color: #3399FF;
+    //}
 
-    :host([blue]) #head {
-      background-color: #3399FF;
-    }
+    //:host([yellow]) #head {
+    //  background-color: #f2dc23;
+    //}
 
-    :host([yellow]) #head {
-      background-color: #f2dc23;
-    }
+    //:host([purple]) #head {
+    //  background-color: #800080;
+    //}
 
-    :host([purple]) #head {
-      background-color: #800080;
-    }
-
-    :host([green]) #head {
-      background-color: #008000;
-    }
+    //:host([green]) #head {
+    //  background-color: #008000;
+    //}
 
     .cards {
       width: 200px;
@@ -50,6 +51,7 @@ class CardTemp extends LitElement {
       height: 20px;
       width: 200px;
       font-size: 12px;
+      background-color: #3399FF;
     }
 
     .titles {
@@ -73,27 +75,7 @@ class CardTemp extends LitElement {
       height: 50px;
       width: 50px;
     }
-    .handle {
-      length: 200px;
-      width: 10px;
-      border: 1px solid black;
-      background-color: solid red;
-      float: left;
-    }
   `;
-
-  constructor() {
-    super();
-    this.blue = false;
-    this.yellow = false;
-    this.purple = false;
-    this.green = false;
-    this.heading = "";
-    this.titles = "";
-    this.creator = "";
-    this.images = "";
-    this.color = "";
-  }
 
   render() {
     return html`

@@ -34,6 +34,55 @@ export default async function handler(req, res) {
       titles: '[test] Treat Yourself',
       color: '#008000',
     },
+    // =-------------------------------
+    {
+      heading: 'Computer Science',
+      image:
+        'https://external-preview.redd.it/1MuiO5_KW_8rfN3AEGdRxU-p1VEcaQi4bdLb5rBvtjg.png?format=pjpg&auto=webp&s=83247025c60f25bb81bb989c376c58bb9613cd4c',
+      creator: 'Allain Daigle',
+      titles: '[test] Treat Yourself',
+      color: '#008000',
+    },
+    {
+      heading: 'Agriculture & Natural Resources',
+      image:
+        'https://external-preview.redd.it/1MuiO5_KW_8rfN3AEGdRxU-p1VEcaQi4bdLb5rBvtjg.png?format=pjpg&auto=webp&s=83247025c60f25bb81bb989c376c58bb9613cd4c',
+      creator: 'Allain Daigle',
+      titles: '[test] Treat Yourself',
+      color: '#008000',
+    },
+    {
+      heading: 'Agriculture & Natural Resources',
+      image:
+        'https://external-preview.redd.it/1MuiO5_KW_8rfN3AEGdRxU-p1VEcaQi4bdLb5rBvtjg.png?format=pjpg&auto=webp&s=83247025c60f25bb81bb989c376c58bb9613cd4c',
+      creator: 'Allain Daigle',
+      titles: '[test] Treat Yourself',
+      color: '#008000',
+    },
+    {
+      heading: 'Agriculture & Natural Resources',
+      image:
+        'https://external-preview.redd.it/1MuiO5_KW_8rfN3AEGdRxU-p1VEcaQi4bdLb5rBvtjg.png?format=pjpg&auto=webp&s=83247025c60f25bb81bb989c376c58bb9613cd4c',
+      creator: 'Allain Daigle',
+      titles: '[test] Treat Yourself',
+      color: '#008000',
+    },
+    {
+      heading: 'Agriculture & Natural Resources',
+      image:
+        'https://external-preview.redd.it/1MuiO5_KW_8rfN3AEGdRxU-p1VEcaQi4bdLb5rBvtjg.png?format=pjpg&auto=webp&s=83247025c60f25bb81bb989c376c58bb9613cd4c',
+      creator: 'Allain Daigle',
+      titles: '[test] Treat Yourself',
+      color: '#008000',
+    },
+    {
+      heading: 'Agriculture & Natural Resources',
+      image:
+        'https://external-preview.redd.it/1MuiO5_KW_8rfN3AEGdRxU-p1VEcaQi4bdLb5rBvtjg.png?format=pjpg&auto=webp&s=83247025c60f25bb81bb989c376c58bb9613cd4c',
+      creator: 'Allain Daigle',
+      titles: '[test] Treat Yourself',
+      color: '#008000',
+    },
   ];
 
   res.setHeader('Cache-Control', 'max-age=0, s-maxage=1800');
