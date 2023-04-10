@@ -15,11 +15,9 @@ class CardTemp extends LitElement {
 
   static styles = css`
     :host {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display: wrap;
+      flex-direction: row;
       justify-content: flex-start;
-      margin: 0 auto;
     }
     
     //Commented out to show approach to custom coloring that we tried to implement

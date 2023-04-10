@@ -20,8 +20,8 @@ class Badgelist extends LitElement {
     }
 
     .wrapper {
-      border: 2px solid black;
       display: flex;
+      flex-wrap: wrap;
     }
     .item {
       display: inline-flex;

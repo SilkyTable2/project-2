@@ -13,12 +13,16 @@ class Project2 extends LitElement {
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      margin: 0 auto;
+      margin: 0 fixed;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
     }
 
     .boxwidth {
       width: 800px;
     }
+    
     .topbar {
       height: 100px;
       text-align: left;
@@ -35,9 +39,11 @@ class Project2 extends LitElement {
     }
 
     .badgebar {
-      height: 30px;
+      height: 100%;
       text-align: left;
       font-size: 18px;
+      display: flex;
+      flex-wrap: wrap;
     }
 
     // -------css for searchbar-------
@@ -91,13 +97,16 @@ class Project2 extends LitElement {
               placeholder="Search Content, Topics, and People"
             />
           </div>
-          <div class="badgebar">Badges:</div>
+          <div class="badgebar">
+            Badges:
+            ${this.globalBadgeCtor.isLoading
+            ? html`<div>Loading...</div>`
+            : html`<badge-list
+               .badges=${this.globalBadgeCtor.badges}
+              ></badge-list>`}
+          </div>
         </div>
-        ${this.globalBadgeCtor.isLoading
-          ? html`<div>Loading...</div>`
-          : html`<badge-list
-              .badges=${this.globalBadgeCtor.badges}
-            ></badge-list>`}
+        
       </div>
     `;
   }
