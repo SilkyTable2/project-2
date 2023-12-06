@@ -31,6 +31,7 @@ class Badgelist extends LitElement {
   render() {
     return html`
       <div class="wrapper">
+        <!--Sends JSON data from badges.js to card-temp.js!-->
         ${this.badges.map(
           badge => html`
             <div class="item">

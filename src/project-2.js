@@ -64,7 +64,7 @@ class Project2 extends LitElement {
       border-bottom: 2px solid blue;
     }
 
-    /** accessibility enhancement to not animate the changes possibly
+    /** accessibility enhancement to not animate the changes
     for users that have motion activated disabilities **/
     @media (prefers-reduced-motion) {
       input {
@@ -83,7 +83,7 @@ class Project2 extends LitElement {
   }
 
   render() {
-    console.log('rendering project-2');
+    console.log('rendering project-2'); // probe checking whether it renders
     return html`
       <div>
         <div class="boxwidth">
@@ -97,10 +97,10 @@ class Project2 extends LitElement {
               placeholder="Search Content, Topics, and People"
             />
           </div>
-          <div class="badgebar">
+          <div class="badgebar"> 
             Badges:
             ${this.globalBadgeCtor.isLoading
-            ? html`<div>Loading...</div>`
+            ? html`<div>Loading...</div>` // displays "Loading..." for slow connections
             : html`<badge-list
                .badges=${this.globalBadgeCtor.badges}
               ></badge-list>`}
