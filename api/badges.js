@@ -31,7 +31,7 @@ export default async function handler(req, res) {
       image:
         'https://external-preview.redd.it/1MuiO5_KW_8rfN3AEGdRxU-p1VEcaQi4bdLb5rBvtjg.png?format=pjpg&auto=webp&s=83247025c60f25bb81bb989c376c58bb9613cd4c',
       creator: 'Allain Daigle',
-      titles: '[test] Treat Yourself',
+      titles: 'Sand: How Not to Grow Crops',
       color: '#008000',
     },
     // =-------------------------------
@@ -40,31 +40,31 @@ export default async function handler(req, res) {
       image:
         'https://external-preview.redd.it/1MuiO5_KW_8rfN3AEGdRxU-p1VEcaQi4bdLb5rBvtjg.png?format=pjpg&auto=webp&s=83247025c60f25bb81bb989c376c58bb9613cd4c',
       creator: 'Bob (the builder)',
-      titles: 'Tester 2',
+      titles: 'Java: Introduction',
       color: '#008000',
     },
     {
       heading: 'Agriculture & Natural Resources',
       image:
         'https://external-preview.redd.it/1MuiO5_KW_8rfN3AEGdRxU-p1VEcaQi4bdLb5rBvtjg.png?format=pjpg&auto=webp&s=83247025c60f25bb81bb989c376c58bb9613cd4c',
-      creator: 'Phil Swift',
-      titles: 'Tester 3',
+      creator: 'Phill Collins',
+      titles: 'Dirt and Minerals Science',
       color: '#008000',
     },
     {
-      heading: 'Agriculture & Natural Resources',
+      heading: 'Education',
       image:
         'https://external-preview.redd.it/1MuiO5_KW_8rfN3AEGdRxU-p1VEcaQi4bdLb5rBvtjg.png?format=pjpg&auto=webp&s=83247025c60f25bb81bb989c376c58bb9613cd4c',
-      creator: 'Joe Mama',
-      titles: 'tester 4',
+      creator: 'Leslie Frauen',
+      titles: 'Calculus: Introduction',
       color: '#008000',
     },
     {
       heading: 'Business',
       image:
         'https://external-preview.redd.it/1MuiO5_KW_8rfN3AEGdRxU-p1VEcaQi4bdLb5rBvtjg.png?format=pjpg&auto=webp&s=83247025c60f25bb81bb989c376c58bb9613cd4c',
-      creator: 'Joe Mama',
-      titles: 'Mind destroying assignments',
+      creator: 'Joe Burlhartt',
+      titles: 'Mind Over Matter: Solving Poor Time Management',
       color: '#008000',
     },
     {
@@ -72,7 +72,7 @@ export default async function handler(req, res) {
       image:
         'https://external-preview.redd.it/1MuiO5_KW_8rfN3AEGdRxU-p1VEcaQi4bdLb5rBvtjg.png?format=pjpg&auto=webp&s=83247025c60f25bb81bb989c376c58bb9613cd4c',
       creator: 'Allain Daigle',
-      titles: 'AAAAAAA',
+      titles: 'Finding The Secret to Python',
       color: '#008000',
     },
     {
@@ -80,7 +80,7 @@ export default async function handler(req, res) {
       image:
         'https://external-preview.redd.it/1MuiO5_KW_8rfN3AEGdRxU-p1VEcaQi4bdLb5rBvtjg.png?format=pjpg&auto=webp&s=83247025c60f25bb81bb989c376c58bb9613cd4c',
       creator: 'Allain Daigle',
-      titles: '[test] Treat Yourself',
+      titles: 'Treat Yourself: Life of Ice Cream',
       color: '#008000',
     },
   ];
